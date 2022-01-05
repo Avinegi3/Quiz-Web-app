@@ -116,6 +116,11 @@ h4{
     height: 98px;
     width: 838px;
 }
+ .hidep{
+   position:absolute;
+   right: 50px;
+   top: 36px;
+ }
 .topic{
     position: absolute;
     top:20px;
