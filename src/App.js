@@ -16,6 +16,7 @@ fetch("https://api.startladder.co/api/frontend/tasks")
       answers.push(result.task_array[y].answer);
       y++;
      }        
+     
   });
   
 function App() {
@@ -87,14 +88,16 @@ function App() {
 
     const keyPress=(event)=>{
       if(event.key==="Enter"){
-        setValue(" ");
+        setValue("");
         check();
         
       } 
    }
 
    const check=()=>{
-     if(value===answers[x]){
+     var lower=answers[x].toLowerCase();
+     console.log(lower);
+     if(value===lower){
       count++;
         setlottie({display: "block"});
         setTimeout(() => {
