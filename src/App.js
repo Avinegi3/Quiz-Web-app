@@ -45,6 +45,7 @@ function App() {
   const[divM,setDivM]=useState({display:"none"});
   const[value,setValue]=useState(""); 
   const[p,setP]=useState({display:"none"});
+  const[show,setShow]=useState({display:"block"});
   const[button,setButton]=useState({display:"block"});
   const[div,setDiv]=useState({display: "none"}); 
   const[lottie,setlottie]=useState({display:"none"});
