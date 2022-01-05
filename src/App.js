@@ -44,7 +44,7 @@ function App() {
   const[time,setTime]=useState({min:0,sec:0});
   const[divM,setDivM]=useState({display:"none"});
   const[value,setValue]=useState(""); 
-  
+  const[p,setP]=useState({display:"none"});
   const[button,setButton]=useState({display:"block"});
   const[div,setDiv]=useState({display: "none"}); 
   const[lottie,setlottie]=useState({display:"none"});
@@ -125,6 +125,10 @@ function App() {
    const back=()=>{
     window.location.reload(false);
    }
+   const solve=()=>{
+    setShow({display: "none"});
+    setP({display: "block"})
+   }
   
 
   return (
@@ -145,7 +149,7 @@ function App() {
     <div className="div3" style={div}  >
       <h4 className="answers">ANSWERS</h4>
       <input type="text" className="input" value={value} ref={(input) => {input && input.focus() }} onChange={event=>setValue(event.target.value)} placeholder="Type Answer..." onKeyPress={keyPress} />
-      <p className="p3"> Stuck?</p> <button className="solution"> See Solution </button>
+      <p className="p3"> Stuck?</p><p className="hidep" style={p}>Time is running!</p> <button className="solution" style={show} onClick={solve} > See Solution </button>
       <Lottie style={lottie} options={correct} height={100} width={100}/><Lottie style={lottie1} options={wrong} height={50} width={50}/>
       
     </div>
