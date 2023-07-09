@@ -3,29 +3,25 @@ import Lottie from 'react-lottie';
 import './App.css';
 
 const questions = [
-  "How do you declare a variable in JavaScript?",
-  "Difference between let, const, and var in JavaScript?",
-  "How to check if a variable is an array in JavaScript?",
-  "Concept of hoisting in JavaScript?",
-  "How to clone an object in JavaScript?",
-  "How do you check if a variable is defined in JavaScript?",
-  "What is the purpose of the NaN value in JavaScript?",
-  "How do you convert a string to a number in JavaScript?",
-  "What is the purpose of the map() function in JavaScript?",
-  "How do you add an element to the end of an array in JavaScript?"
+  "How do you add an element to the end of an array in JavaScript?",
+  "What is the JavaScript operator for concatenation?",
+  "What method converts a string to lowercase?",
+  "What is the data type for true and false values?",
+  "What is the JavaScript keyword for declaring a constant?",
+  "What is the JavaScript method for removing the first element from an array?",
+  "What is the shorthand operator for incrementing a variable by 1?",
+  "What is the operator for strict equality comparison?"
 ];
 
 const answers = [
-  ["let", "const", "var"],
-  ["Scope", "Reassignment"],
-  ["Array.isArray()"],
-  ["Variable movement"],
-  ["Object.assign()", "Spread syntax"],
-  ["typeof variable !== 'undefined'"],
-  ["Not-a-Number"],
-  ["parseInt()", "parseFloat()", "Number()"],
-  ["Transform array elements"],
-  ["push()"]
+  ["push"],
+  ["+"],
+  ["toLowerCase"],
+  ["boolean"],
+  ["const"],
+  ["shift"],
+  ["++"],
+  ["==="]
 ];
 
 var s=0,m=0;
@@ -147,7 +143,7 @@ function App() {
     <div className="main">
     <div className="div1" style={div} >
       <h4 className="topic">TOPIC</h4>
-      <p className="p1">Product Management</p>
+      <p className="p1">JavaScript</p>
       <div className="time"> 
       <div className="min"><p className="minP">{m} <br></br>MIN </p>  </div> 
       <div className="sec"> <p className="minP"> {s} <br></br>SEC</p>    </div>
