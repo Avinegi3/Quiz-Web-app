@@ -14,18 +14,18 @@ const questions = [
 ];
 
 const answers = [
-  ["push"],
-  ["+"],
-  ["toLowerCase"],
-  ["boolean"],
-  ["const"],
-  ["shift"],
-  ["++"],
-  ["==="]
+  "push",
+  "+",
+  "toLowerCase",
+  "boolean",
+  "const",
+  "shift",
+  "++",
+  "==="
 ];
 
 var s=0,m=0;
-let x=0,y=0,count=0,accuracy=0;
+let x=0,count=0,accuracy=0;
 
   
 function App() {
@@ -116,7 +116,6 @@ function App() {
       }
      else{
        console.log("no");
-       
        setlottie1({display: "block"});
        setlottie1({margin:"25px auto"}); 
        setTimeout(() => {
