@@ -2,26 +2,37 @@ import React,{useState} from 'react';
 import Lottie from 'react-lottie';
 import './App.css';
 
-let questions=[];
-let answers=[];
+const questions = [
+  "How do you declare a variable in JavaScript?",
+  "Difference between let, const, and var in JavaScript?",
+  "How to check if a variable is an array in JavaScript?",
+  "Concept of hoisting in JavaScript?",
+  "How to clone an object in JavaScript?",
+  "How do you check if a variable is defined in JavaScript?",
+  "What is the purpose of the NaN value in JavaScript?",
+  "How do you convert a string to a number in JavaScript?",
+  "What is the purpose of the map() function in JavaScript?",
+  "How do you add an element to the end of an array in JavaScript?"
+];
+
+const answers = [
+  ["let", "const", "var"],
+  ["Scope", "Reassignment"],
+  ["Array.isArray()"],
+  ["Variable movement"],
+  ["Object.assign()", "Spread syntax"],
+  ["typeof variable !== 'undefined'"],
+  ["Not-a-Number"],
+  ["parseInt()", "parseFloat()", "Number()"],
+  ["Transform array elements"],
+  ["push()"]
+];
+
 var s=0,m=0;
 let x=0,y=0,count=0,accuracy=0;
 
-fetch("https://api.startladder.co/api/frontend/tasks")
-  .then(response => response.json())   
-  .then(result=>{  
-    console.log(result.task_array);
-     while (y<=6) {
-      questions.push(result.task_array[y].question);
-      answers.push(result.task_array[y].answer);
-      y++;
-     }        
-     
-  });
   
 function App() {
-
-    
   const correct = {
     loop: true,
     autoplay: true,
